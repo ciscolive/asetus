@@ -30,7 +30,7 @@ Metrics/PerceivedComplexity:
 Naming/PredicateName:
   Exclude:
     - 'spec/**/*'
-    - 'lib/asetus/configstruct.rb'
+    - 'lib/asetus/config_struct.rb'
 
 # Offense count: 1
 Security/Eval:
@@ -46,7 +46,7 @@ Security/JSONLoad:
 # Offense count: 1
 Style/MissingRespondToMissing:
   Exclude:
-    - 'lib/asetus/configstruct.rb'
+    - 'lib/asetus/config_struct.rb'
 
 # Offense count: 1
 # This cop supports unsafe autocorrection (--autocorrect-all).
@@ -60,7 +60,7 @@ Style/MutableConstant:
 # This cop supports unsafe autocorrection (--autocorrect-all).
 Style/SlicingWithRange:
   Exclude:
-    - 'lib/asetus/configstruct.rb'
+    - 'lib/asetus/config_struct.rb'
 
 # Offense count: 5
 # This cop supports unsafe autocorrection (--autocorrect-all).

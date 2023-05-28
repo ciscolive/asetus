@@ -16,10 +16,10 @@ Gem::Specification.new do |s|
 
   s.required_ruby_version = '>= 2.7'
 
-  s.add_development_dependency 'bundler',             '~> 2.2'
+  s.add_development_dependency 'bundler',             '~> 2.4'
   s.add_development_dependency 'rake',                '~> 13.0'
-  s.add_development_dependency 'rubocop',             '~> 1.48.0'
-  s.add_development_dependency 'rubocop-minitest',    '~> 0.29.0'
+  s.add_development_dependency 'rubocop',             '~> 1.51.0'
+  s.add_development_dependency 'rubocop-minitest',    '~> 0.31.0'
   s.add_development_dependency 'rubocop-rake',        '~> 0.6.0'
   s.add_development_dependency 'simplecov',           '~> 0.22.0'
   s.add_development_dependency 'simplecov-cobertura', '~> 2.1.0'

@@ -3,8 +3,10 @@ Configuration library for ruby with YAML/JSON/TOML backends with unified object
 access
 
 ## Install
-```
- % gem install asetus
+```shell
+  gem uninstall asetus
+  gem build asetus.gemspec
+  gem install ./asetus-0.4.0.gem
 ```
 
 ## Use
