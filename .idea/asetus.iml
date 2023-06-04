@@ -21,9 +21,9 @@
     <orderEntry type="library" scope="PROVIDED" name="rake (v13.0.6, RVM: ruby-3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="regexp_parser (v2.8.0, RVM: ruby-3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rexml (v3.2.5, RVM: ruby-3.2.1) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rubocop (v1.48.1, RVM: ruby-3.2.1) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rubocop-ast (v1.28.1, RVM: ruby-3.2.1) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rubocop-minitest (v0.29.0, RVM: ruby-3.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rubocop (v1.51.0, RVM: ruby-3.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rubocop-ast (v1.29.0, RVM: ruby-3.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rubocop-minitest (v0.31.0, RVM: ruby-3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rubocop-rake (v0.6.0, RVM: ruby-3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ruby-progressbar (v1.13.0, RVM: ruby-3.2.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="simplecov (v0.22.0, RVM: ruby-3.2.1) [gem]" level="application" />
