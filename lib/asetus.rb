@@ -52,14 +52,14 @@ class Asetus
     # 加载系统配置并合并
     if %i[system all].include?(level)
       @system = load_cfg(@sysdir)
-      @cfg = merge(@cfg, @system)
+      @cfg    = merge(@cfg, @system)
     end
     # 如果没有定义用户配置则跳过后续逻辑
     return unless %i[user all].include?(level)
 
     # 加载用户配置并合并
     @user = load_cfg(@usrdir)
-    @cfg = merge(@cfg, @user)
+    @cfg  = merge(@cfg, @user)
   end
 
   # 自动保存配置文件 -- 缺省保存到用户家目录
@@ -116,10 +116,10 @@ class Asetus
   # @option opts [boolean] :load     automatically load+merge system+user config with defaults in #cfg
   # @option opts [boolean] :key_to_s convert keys to string by calling #to_s for keys
   def initialize(opts = {})
-    @name = (opts.delete(:name) || metaname)
+    @name    = (opts.delete(:name) || metaname)
     @adapter = (opts.delete(:adapter) || 'yaml')
-    @usrdir = (opts.delete(:usrdir) || File.join(Dir.home, '.config', @name))
-    @sysdir = (opts.delete(:sysdir) || File.join('/etc', @name))
+    @usrdir  = (opts.delete(:usrdir) || File.join(Dir.home, '.config', @name))
+    @sysdir  = (opts.delete(:sysdir) || File.join('/etc', @name))
     @cfgfile = (opts.delete(:cfgfile) || CONFIG_FILE)
     # 用户设定的缺省配置
     @default = ConfigStruct.new opts.delete(:default)
@@ -127,10 +127,10 @@ class Asetus
     @system = ConfigStruct.new
     # 用户设定配置
     @user = ConfigStruct.new
-    @cfg = ConfigStruct.new
+    @cfg  = ConfigStruct.new
     # 是否指定 load 状态
-    @load = true
-    @load = opts.delete(:load) if opts.has_key?(:load)
+    @load     = true
+    @load     = opts.delete(:load) if opts.has_key?(:load)
     @key_to_s = opts.delete(:key_to_s)
     raise UnknownOption, "option '#{opts}' not recognized" unless opts.empty?
 
@@ -141,7 +141,7 @@ class Asetus
   # 加载配置文件
   def load_cfg(dir)
     @file = File.join(dir, @cfgfile)
-    file = File.read(@file)
+    file  = File.read(@file)
     ConfigStruct.new(from(@adapter, file), key_to_s: @key_to_s)
   rescue Errno::ENOENT
     ConfigStruct.new
@@ -150,7 +150,7 @@ class Asetus
   # 保存配置文本
   def save_cfg(dir, config)
     config = to(@adapter, config)
-    file = File.join(dir, @cfgfile)
+    file   = File.join(dir, @cfgfile)
     FileUtils.mkdir_p(dir)
     File.write(file, config)
   end

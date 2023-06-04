@@ -4,8 +4,8 @@ class Asetus
     def _asetus_to_hash
       hash = {}
       @cfg.each do |key, value|
-        value = value._asetus_to_hash if value.instance_of?(ConfigStruct)
-        key = key.to_s if @key_to_s
+        value     = value._asetus_to_hash if value.instance_of?(ConfigStruct)
+        key       = key.to_s if @key_to_s
         hash[key] = value
       end
       hash
@@ -35,7 +35,7 @@ class Asetus
     # 对象实例化函数
     def initialize(hash = nil, opts = {})
       @key_to_s = opts.delete :key_to_s
-      @cfg = hash ? _asetus_from_hash(hash) : {}
+      @cfg      = hash ? _asetus_from_hash(hash) : {}
     end
 
     # 元编程 -- 动态方法
@@ -45,7 +45,7 @@ class Asetus
       # hash#[] --> 查询某个键值对
       name = name.to_s
       name = args.shift if name[0..1] == '[]' # asetus.cfg['foo']
-      arg = args.first
+      arg  = args.first
 
       if name[-1..-1] == '?' # asetus.cfg.foo.bar?
         @cfg[name[0..-2]] if @cfg.has_key? name[0..-2]
@@ -74,7 +74,7 @@ class Asetus
     def _asetus_from_hash(hash)
       cfg = {}
       hash.each do |key, value|
-        value = ConfigStruct.new value, key_to_s: @key_to_s if value.instance_of?(Hash)
+        value    = ConfigStruct.new value, key_to_s: @key_to_s if value.instance_of?(Hash)
         cfg[key] = value
       end
       cfg
