@@ -92,6 +92,7 @@ class Asetus
     no_config = false
     no_config = true if @system.empty? && @user.empty?
     if no_config
+      # 动态加载缺省配置并写入到用户或项目配置路径
       src = instance_variable_get "@#{src}"
       instance_variable_set("@#{dst}", src.dup)
       # 保存缺省配置文件
